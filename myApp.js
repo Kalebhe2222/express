@@ -16,11 +16,14 @@ app.get('/',function(req,res){
   app.use('/public', express.static(__dirname +   "/public"));
   app.get("/json",function(req,res){
    res.json({"message": "Hello json"});
-    
-  app.use('/env', express.static(__dirname +   "/env"));
-    
- 
 
+var env = process.env.MESSAGE_STYLE;
+    if(var env == uppercase){
+       res.json({"message": "HELLO JSON"});
+    }else{
+           res.json({"message": "Hello json"});
+      
+    }
     
   })
   
