@@ -18,9 +18,9 @@ app.get('/',function(req,res){
 
     
     if (process.env.VAR_NAME === "uppercase") {
-  response = "Hello World".toUpperCase();
+  res.json ({{{"message": "HELLO JSON"}}});
 } else {
-  response = "Hello World";
+  res.json ({{"message": "Hello json"}});
 }
     
   })
